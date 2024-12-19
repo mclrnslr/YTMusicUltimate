@@ -86,6 +86,7 @@ jobs:
           cd ${{ github.workspace }}/main/packages
           tweakName=$(ls)
           cd ${{ github.workspace }}/main
+          brew reinstall pipx
           cyan -i YouTubeMusic.ipa -o packages/YTMusicUltimate.ipa -uwsf packages/$tweakName
 
       - name: Create Release
